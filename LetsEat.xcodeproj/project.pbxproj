@@ -20,6 +20,9 @@
 		B107E4B31E5D428A0085F7BD /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B107E4B21E5D428A0085F7BD /* ExploreDataManager.swift */; };
 		B107E4B51E5D465B0085F7BD /* ExploreCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B107E4B41E5D465B0085F7BD /* ExploreCellCollectionViewCell.swift */; };
 		B107E4BA1E5D4CB10085F7BD /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B107E4B91E5D4CB10085F7BD /* RestaurantListViewController.swift */; };
+		B1CA4B861E5E608E00BF6738 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA4B851E5E608E00BF6738 /* LocationViewController.swift */; };
+		B1CA4B881E5E631600BF6738 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1CA4B871E5E631600BF6738 /* Locations.plist */; };
+		B1CA4B8A1E5E635F00BF6738 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA4B891E5E635F00BF6738 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B107E4B21E5D428A0085F7BD /* ExploreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
 		B107E4B41E5D465B0085F7BD /* ExploreCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		B107E4B91E5D4CB10085F7BD /* RestaurantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		B1CA4B851E5E608E00BF6738 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B1CA4B871E5E631600BF6738 /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		B1CA4B891E5E635F00BF6738 /* LocationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,9 @@
 		B107E4A41E5D27580085F7BD /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA4B841E5E606F00BF6738 /* Model */,
+				B1CA4B831E5E606B00BF6738 /* View */,
+				B1CA4B821E5E606500BF6738 /* Controller */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -241,6 +250,30 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		B1CA4B821E5E606500BF6738 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA4B851E5E608E00BF6738 /* LocationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B1CA4B831E5E606B00BF6738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B1CA4B841E5E606F00BF6738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA4B871E5E631600BF6738 /* Locations.plist */,
+				B1CA4B891E5E635F00BF6738 /* LocationDataManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +337,7 @@
 				B107E49A1E5D26820085F7BD /* Explore.storyboard in Resources */,
 				B107E48A1E5CBFD90085F7BD /* LaunchScreen.storyboard in Resources */,
 				B107E49C1E5D26B30085F7BD /* Map.storyboard in Resources */,
+				B1CA4B881E5E631600BF6738 /* Locations.plist in Resources */,
 				B107E4851E5CBFD90085F7BD /* Main.storyboard in Resources */,
 				B107E4AF1E5D3E940085F7BD /* ExploreData.plist in Resources */,
 				B107E4941E5CE4C50085F7BD /* assets.xcassets in Resources */,
@@ -319,10 +353,12 @@
 			files = (
 				B107E4AD1E5D2A450085F7BD /* ExploreControllerViewController.swift in Sources */,
 				B107E4BA1E5D4CB10085F7BD /* RestaurantListViewController.swift in Sources */,
+				B1CA4B8A1E5E635F00BF6738 /* LocationDataManager.swift in Sources */,
 				B107E4801E5CBFD90085F7BD /* AppDelegate.swift in Sources */,
 				B107E4B11E5D3EB50085F7BD /* ExploreItem.swift in Sources */,
 				B107E4B51E5D465B0085F7BD /* ExploreCellCollectionViewCell.swift in Sources */,
 				B107E4B31E5D428A0085F7BD /* ExploreDataManager.swift in Sources */,
+				B1CA4B861E5E608E00BF6738 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +530,7 @@
 				B107E4901E5CBFD90085F7BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

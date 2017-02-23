@@ -10,6 +10,7 @@ import UIKit
 
 class ExploreViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet var collectionView: UICollectionView!
+
     let manager = ExploreDataManager();
 
     override func viewDidLoad() {
@@ -35,5 +36,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
         if let image = item.image { cell.imgExplore.image = UIImage(named: image) };
         
         return cell;
+    }
+    
+    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {
+        
     }
 }
