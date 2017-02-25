@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="riV-qV-W6U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +16,6 @@
                     <tabBarItem key="tabBarItem" title="MAP" image="icon-map-off" selectedImage="icon-map-on" id="7kk-Kz-p3U"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Bz-Nc-NuU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-31.199999999999999" y="7.6461769115442282"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="vnf-7T-kCs">
             <objects>
-                <viewController id="ufj-HZ-s76" sceneMemberID="viewController">
+                <viewController id="ufj-HZ-s76" customClass="MapViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ci-P3-PSY"/>
                         <viewControllerLayoutGuide type="bottom" id="E6j-Zn-16q"/>
@@ -60,7 +63,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="33"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BQ-pW-RNi">
-                                            <rect key="frame" x="0.0" y="11" width="110" height="12"/>
+                                            <rect key="frame" x="0.0" y="10.5" width="110" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="aEp-Pj-sNR"/>
                                             </constraints>
@@ -101,6 +104,9 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="PCU-xV-1qk" id="KIm-cl-M77"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktv-Iy-Jzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
