@@ -18,6 +18,7 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
     var postalCode: String?
     var state: String?
     var imageUrl: String?
+    var data: [String: AnyObject]?
     
     init(dict: [String: AnyObject]) {
         if let lat = dict["lat"] as? Double { self.latitude = lat }
@@ -28,6 +29,8 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
         if let postalCode = dict["postal_code"] as? String { self.postalCode = postalCode }
         if let state = dict["state"] as? String { self.state = state }
         if let image = dict["image_url"] as? String { self.imageUrl = image }
+        
+        data = dict
     }
     
     var coordinate: CLLocationCoordinate2D {
@@ -43,5 +46,10 @@ class RestaurantAnnotation: NSObject, MKAnnotation {
     
     var title: String? {
         return name
+    }
+    
+    var restaurantItem: RestaurantItem {
+        guard let restaurantData = data else { return RestaurantItem() }
+        return RestaurantItem(dict: restaurantData)
     }
 }

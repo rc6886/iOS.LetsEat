@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController, UICollectionViewDataSource {
+class ExploreViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
 
     let manager = ExploreDataManager();
@@ -19,6 +19,12 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
         manager.fetch();
     }
     
+    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {
+        
+    }
+}
+
+extension ExploreViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
@@ -36,9 +42,5 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource {
         if let image = item.image { cell.imgExplore.image = UIImage(named: image) };
         
         return cell;
-    }
-    
-    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {
-        
     }
 }

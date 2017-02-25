@@ -106,11 +106,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="PCU-xV-1qk" id="KIm-cl-M77"/>
+                        <segue destination="y8s-db-jul" kind="show" identifier="showDetail" id="zCv-tM-n4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktv-Iy-Jzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908" y="8"/>
+        </scene>
+        <!--RestaurantDetail-->
+        <scene sceneID="x9X-av-Orj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RestaurantDetail" id="y8s-db-jul" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vy5-Q1-XkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="624"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pgy-XO-pVI">
